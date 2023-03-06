@@ -46,19 +46,25 @@ Many options are available if you want to create a more specific plot:
 | text_inside | False | Boolean | Indicates if class names are in color blocks (False: outside of graph, True: inside graph color blocks). Ignored if with_text=False |
 | with_axis_title | False | Boolean | Indicates if column names are to be shown or not (under the bars). |
 | alpha | 0.65 | [0..1] float | Indicates the alpha value for the strips in the middle of the graph. 0 means invisible strips, 1 means strips are in the same color than the bars |
-| mode | 'smooth' | 'linear', 'sigmoid', 'smooth' | How to connect strips from one side to another one. Sigmoid has a bigger angle in the middle than smooth, and linear are just straight lines. |
-| image_filename | None | PNG filename | If not none, the graph is displayed AND save with the name given |
+| mode | 'smooth' | 'linear', 'sigmoid', 'smooth' | How to connect strips from one side to another one. Sigmoid has a bigger angle in the middle than smooth, and linear are just straight lines |
+| image_filename | None | PNG filename | If not None, the graph is displayed AND saved with the name given |
 
 ## More samples
 
+    import propplot as pp
+    df = pd.read_csv('sample.csv')
     pp.proportion_plot(df, alpha=0.8, text_inside=True, vertical_space=2)
     
 !['Text inside color blocks, with more vertical space'](sample1.png)
 
+    import propplot as pp
+    df = pd.read_csv('sample.csv')
     pp.proportion_plot(df, color_palette='Teamwork', fontsize=12, mode='linear')
     
 !['Special TeamWork color palette, bigger text, linear connections'](sample2.png)
 
+    import propplot as pp
+    df = pd.read_csv('sample.csv')
     pp.proportion_plot(df, color_dict=['black', 'yellow', 'blue', 'red', 'darkred', 'green'], with_text=False, mode='sigmoid')
 
 !['Olympics colors, without text and sigmoid connections'](sample3.png)
