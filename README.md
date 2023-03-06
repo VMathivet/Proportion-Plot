@@ -21,7 +21,7 @@ For example, here, we create it from a csv file:
 
     df = pd.read_csv('sample.csv')
 
-![Content]('sampledata.png')
+![Content](sampledata.png)
 
 All you have to do is to import the library and create a proportion plot:
 
