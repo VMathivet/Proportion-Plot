@@ -57,11 +57,15 @@ Many options are available if you want to create a more specific plot:
     
 !['Text inside color blocks, with more vertical space'](sample1.png)
 
+---
+
     import propplot as pp
     df = pd.read_csv('sample.csv')
     pp.proportion_plot(df, color_palette='Teamwork', fontsize=12, mode='linear')
     
 !['Special TeamWork color palette, bigger text, linear connections'](sample2.png)
+
+---
 
     import propplot as pp
     df = pd.read_csv('sample.csv')
