@@ -44,6 +44,7 @@ def proportion_plot(df, color_palette='hls', color_dict=None, vertical_space=1, 
     left_tops = create_bar('left', labels, df.columns[1], df.iloc[:,1], with_text, text_inside, with_axis_title, colorDict, fontsize, vertical_space, fig)
     right_tops = create_bar('right', labels, df.columns[2], df.iloc[:,2], with_text, text_inside, with_axis_title, colorDict, fontsize, vertical_space, fig)
     create_strips(labels, left_tops, right_tops, mode, vertical_space, alpha, colorDict)
+    plt.show()
     if image_filename is not None:
         save_image(image_filename)
     
