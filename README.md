@@ -19,6 +19,7 @@ First, create a dataframe with your data.
 
 For example, here, we create it from a csv file:
 
+    import pandas as pd
     df = pd.read_csv('sample.csv')
 
 ![Content](sampledata.png)
@@ -51,6 +52,7 @@ Many options are available if you want to create a more specific plot:
 
 ## More samples
 
+    import pandas as pd
     import propplot as pp
     df = pd.read_csv('sample.csv')
     pp.proportion_plot(df, alpha=0.8, text_inside=True, vertical_space=2)
@@ -59,6 +61,7 @@ Many options are available if you want to create a more specific plot:
 
 ---
 
+    import pandas as pd
     import propplot as pp
     df = pd.read_csv('sample.csv')
     pp.proportion_plot(df, color_palette='Teamwork', fontsize=12, mode='linear')
@@ -67,6 +70,7 @@ Many options are available if you want to create a more specific plot:
 
 ---
 
+    import pandas as pd
     import propplot as pp
     df = pd.read_csv('sample.csv')
     pp.proportion_plot(df, color_dict=['black', 'yellow', 'blue', 'red', 'darkred', 'green'], with_text=False, mode='sigmoid')
